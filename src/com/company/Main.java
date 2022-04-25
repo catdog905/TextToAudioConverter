@@ -3,6 +3,8 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        PdfFile pdfFile = new PdfFile("path", Language.English);
+        PdfToAudioAdapter<MP3File> pdfToAudioAdapter = new PdfToAudioAdapter<>(pdfFile);
+        MP3File audioFile = pdfToAudioAdapter.getFile();
     }
 }
