@@ -1,7 +1,5 @@
 package com.company;
 
-import java.io.File;
-
 public class PdfToAudioAdapter implements AudioFile {
     private final GoogleTranslator<AudioFile> googleTranslator = null; // converter dependency
     private final PdfFile pdfFile;
