@@ -1,8 +1,8 @@
 package com.company;
 
-import java.io.File;
-
-//client interface
+/**
+ * Client interface for adapter implementation
+ */
 interface AudioFile {
-    AudioFile getAudioFile();
+    byte[] getAudioFile();
 }

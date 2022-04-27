@@ -1,7 +1,11 @@
 package com.company;
 
+/**
+ * Adapter for PdfFile to AudioFile interface
+ */
 public class PdfToAudioAdapter implements AudioFile {
-    private final GoogleTranslator<AudioFile> googleTranslator = null; // converter dependency
+    // library implementation
+    private final GoogleTranslator googleTranslator = null;
     private final PdfFile pdfFile;
 
     public PdfToAudioAdapter(PdfFile pdfFile) {
@@ -9,7 +13,7 @@ public class PdfToAudioAdapter implements AudioFile {
     }
 
     @Override
-    public AudioFile getAudioFile() {
+    public byte[] getAudioFile() {
         byte[] textBlob = pdfFile.getByteText();
         return googleTranslator.getAudioFromText(textBlob, pdfFile.getLanguage().toString());
     }

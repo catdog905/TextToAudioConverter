@@ -1,14 +1,16 @@
 package com.company;
 
-import java.io.File;
-
-public class WAVFile extends File implements AudioFile {
+/**
+ * Specific case of audioFile
+ */
+public class WAVFile implements AudioFile {
+    private final String pathname;
     public WAVFile(String pathname) {
-        super(pathname);
+        this.pathname = pathname;
     }
 
     @Override
-    public AudioFile getAudioFile() {
+    public byte[] getAudioFile() {
         return null;
     }
 }

@@ -1,14 +1,17 @@
 package com.company;
 
-import java.io.File;
+/**
+ * Specific case of audioFile
+ */
+public class MP3File implements AudioFile {
+    private final String pathname;
 
-public class MP3File extends File implements AudioFile {
     public MP3File(String pathname) {
-        super(pathname);
+        this.pathname = pathname;
     }
 
     @Override
-    public AudioFile getAudioFile() {
+    public byte[] getAudioFile() {
         return null;
     }
 }
