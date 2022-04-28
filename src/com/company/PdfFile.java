@@ -2,12 +2,14 @@ package com.company;
 
 import java.io.File;
 
-public class PdfFile extends File {
+/**
+ * Service to be adapted to client interface
+ */
+public class PdfFile {
     private final String path;
     private final Language language;
 
     public PdfFile(String path, Language language) {
-        super(path);
         this.path = path;
         this.language = language;
     }

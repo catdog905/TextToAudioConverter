@@ -1,9 +1,11 @@
 package com.company;
 
-import java.io.File;
-
-public class PdfToAudioAdapter<T extends File> implements AudioFile<T> {
-    private final GoogleTranslator<T> googleTranslator = null; // converter dependency
+/**
+ * Adapter for PdfFile to AudioFile interface
+ */
+public class PdfToAudioAdapter implements AudioFile {
+    // library implementation
+    private final GoogleTranslator googleTranslator = null;
     private final PdfFile pdfFile;
 
     public PdfToAudioAdapter(PdfFile pdfFile) {
@@ -11,7 +13,7 @@ public class PdfToAudioAdapter<T extends File> implements AudioFile<T> {
     }
 
     @Override
-    public T getFile() {
+    public byte[] getAudioFile() {
         byte[] textBlob = pdfFile.getByteText();
         return googleTranslator.getAudioFromText(textBlob, pdfFile.getLanguage().toString());
     }

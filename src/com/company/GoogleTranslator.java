@@ -1,9 +1,10 @@
 package com.company;
 
-import java.io.File;
-
-interface GoogleTranslator<T> {
-    T getAudioFromText(byte[] file, String language);
+/**
+ * Third-party library to convert byte array text to byte array audio
+ */
+interface GoogleTranslator {
+    byte[] getAudioFromText(byte[] file, String language);
     /**
      * .
      * .

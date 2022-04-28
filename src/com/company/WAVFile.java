@@ -3,10 +3,9 @@ package com.company;
 /**
  * Specific case of audioFile
  */
-public class MP3File implements AudioFile {
+public class WAVFile implements AudioFile {
     private final String pathname;
-
-    public MP3File(String pathname) {
+    public WAVFile(String pathname) {
         this.pathname = pathname;
     }
 
